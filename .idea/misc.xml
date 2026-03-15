@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="Python 3.12 (ai_agent)" />
+  </component>
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="24" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="F:\develop\apache-maven-3.9.4-bin\apache-maven-3.9.4" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="userSettingsFile" value="F:\develop\apache-maven-3.9.4-bin\apache-maven-3.9.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="openjdk-24" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (ai_agent)" project-jdk-type="Python SDK" />
+</project>
