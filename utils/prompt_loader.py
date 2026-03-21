@@ -1,10 +1,11 @@
-from config_handler import prompts_conf
+from utils.config_handler import prompts_conf
 from utils.logger_handler import logger
+from utils.path_tool import get_abs_path
 
 
 def get_system_prompt():
     try:
-        SYSTEM_PROMPT_PATH = prompts_conf["system_prompt_path"]
+        SYSTEM_PROMPT_PATH = get_abs_path(prompts_conf["system_prompt_path"])
     except KeyError as e:
         logger.error(f"[获取系统提示]系统提示配置项不存在，请检查配置文件")
         raise e
@@ -17,7 +18,7 @@ def get_system_prompt():
 
 def get_rag_prompt():
     try:
-        RAG_PROMPT_PATH = prompts_conf["rag_prompt_path"]
+        RAG_PROMPT_PATH = get_abs_path(prompts_conf["rag_prompt_path"])
     except KeyError as e:
         logger.error(f"[获取系统提示]系统提示配置项不存在，请检查配置文件")
         raise e
@@ -30,7 +31,7 @@ def get_rag_prompt():
 
 def get_report_prompt():
     try:
-        REPORT_PROMPT_PATH = prompts_conf["report_prompt_path"]
+        REPORT_PROMPT_PATH = get_abs_path(prompts_conf["report_prompt_path"])
     except KeyError as e:
         logger.error(f"[获取系统提示]系统提示配置项不存在，请检查配置文件")
         raise e
@@ -39,3 +40,4 @@ def get_report_prompt():
     except Exception as e:
         logger.error(f"[获取系统提示]解析生成报告提示词失败")
         raise e
+
