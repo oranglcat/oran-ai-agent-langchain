@@ -2,10 +2,11 @@ from langchain.agents import create_agent
 from langchain_core.stores import InMemoryStore
 from langgraph.checkpoint.memory import InMemorySaver
 from uuid import uuid4 as uuid4_str
-from model.factory import chat_model
-from utils.prompt_loader import get_system_prompt
-from agent.tools.agent_tools import tools
-from agent.tools.middleware import *
+
+from backend.agent.tools.agent_tools import tools
+from backend.agent.tools.middleware import report_prompt_switch, log_before_model, monitor_tool
+from backend.model.factory import chat_model
+from backend.utils.prompt_loader import get_system_prompt
 
 
 class ReactAgent:
