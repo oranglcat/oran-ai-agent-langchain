@@ -4,7 +4,7 @@ RAG文档合并
 from langchain_core.documents import Document
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
-from vector_store import VectorStoreService
+from rag.vector_store import VectorStoreService
 from utils.prompt_loader import get_rag_prompt
 from model.factory import chat_model
 
@@ -25,7 +25,7 @@ class RagSummarizeService():
         
         
     def init_chain(self):
-        chain = self.prompt_template | print_prompt | self.model | StrOutputParser()
+        chain = self.prompt_template | self.model | StrOutputParser()
         return chain
     
     def ragSummarize(self,user_input: str):

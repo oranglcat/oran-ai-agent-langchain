@@ -1,0 +1,6 @@
+
+#天气工具配置
+weather_url: "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation"
+
+
+
